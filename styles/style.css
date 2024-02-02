@@ -1,0 +1,66 @@
+body {
+    padding: 20px;
+
+    /* Very thin roboto font */
+    font-family: "Roboto", sans-serif;
+}
+
+#playground {
+    width: 100%;
+    display: flex;
+}
+
+#sidebar {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#energyChart {
+    width: 90%;
+    margin: 0 40px;
+    height: 100%;
+}
+
+#controls {
+    height: 70%;
+    width: 90%;
+    padding: 30px;
+    margin: 0 40px 40px 40px !important;
+    background-color: #1b1c28;
+    color: rgb(183, 189, 205);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#simulation canvas {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.g1,
+.g2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.g1 i,
+.g2 i {
+    background-color: #14151f;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.g1 {
+    color: #f55a3c;
+}
+
+.g2 {
+    color: #f5d259;
+}
+
+#reloadSimulation {
+    width: 110px;
+}

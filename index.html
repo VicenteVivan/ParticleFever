@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Particle Fever</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
+    <body>
+        <div id="playground">
+            <div id="simulation"></div>
+            <div id="sidebar">
+                <div id="controls" class="container my-4">
+                    <div class="row mb-2">
+                        <div class="g1 col-sm">
+                            <i class="fa-solid fa-atom"></i>
+                        </div>
+                        <div class="col-sm">
+                            <i class="fa-solid fa-hashtag"></i> Particles
+                            <input
+                                type="number"
+                                id="g1NumParticles"
+                                class="form-control"
+                            />
+                        </div>
+                        <div class="col-sm">
+                            <i class="fa-solid fa-weight-hanging"></i> Mass
+                            <input
+                                type="number"
+                                id="g1Mass"
+                                class="form-control"
+                            />
+                        </div>
+                        <div class="col-sm">
+                            <i class="fa-solid fa-gauge-high"></i> Velocity
+                            <input
+                                type="number"
+                                id="g1Velocity"
+                                class="form-control"
+                            />
+                        </div>
+                        <div class="col-sm">
+                            <i class="fa-solid fa-ruler"></i> Radius
+                            <input
+                                type="number"
+                                id="g1Radius"
+                                class="form-control"
+                            />
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="g2 col-sm">
+                            <i class="fa-solid fa-atom"></i>
+                        </div>
+                        <div class="col-sm">
+                            <i class="fa-solid fa-hashtag"></i> Particles
+                            <input
+                                type="number"
+                                id="g2NumParticles"
+                                class="form-control"
+                            />
+                        </div>
+                        <div class="col-sm">
+                            <i class="fa-solid fa-weight-hanging"></i> Mass
+                            <input
+                                type="number"
+                                id="g2Mass"
+                                class="form-control"
+                            />
+                        </div>
+                        <div class="col-sm">
+                            <i class="fa-solid fa-gauge-high"></i> Velocity
+                            <input
+                                type="number"
+                                id="g2Velocity"
+                                class="form-control"
+                            />
+                        </div>
+                        <div class="col-sm">
+                            <i class="fa-solid fa-ruler"></i> Radius
+                            <input
+                                type="number"
+                                id="g2Radius"
+                                class="form-control"
+                            />
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-auto">
+                            <button id="removeWall" class="btn btn-info">
+                                <i class="fa-solid fa-lines-leaning"></i> Break
+                                Wall
+                            </button>
+                        </div>
+                        <div class="col-auto">
+                            <button
+                                id="reloadSimulation"
+                                class="btn btn-success"
+                            >
+                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <canvas id="energyChart"></canvas>
+            </div>
+        </div>
+        <script src="scripts/simulation.js"></script>
+        <script src="scripts/charting.js"></script>
+    </body>
+</html>
